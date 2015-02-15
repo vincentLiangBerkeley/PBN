@@ -1,0 +1,266 @@
+\hypertarget{class_menu}{\subsection{Menu Class Reference}
+\label{class_menu}\index{Menu@{Menu}}
+}
+
+
+This is a concrete controller class for the application.  
+
+
+
+
+{\ttfamily \#include $<$Menu.\+h$>$}
+
+Inheritance diagram for Menu\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_menu}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_menu_ab19f32f8deac0f6c6960f04be8612067}{show\+Menu} ()
+\item 
+virtual void \hyperlink{class_menu_a2243881fe17494a0f6fc38a9211715d6}{get\+Choice} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_menu_a616bae73f48b58a1b5629354826c30cc}{display\+Message} (string message)
+\item 
+virtual void \hyperlink{class_menu_a3fbf0f02d6875bc41c4ee42597d99ff1}{check\+Matrix} (\hyperlink{classt_matrix}{t\+Matrix} $\ast$transition)
+\item 
+virtual void \hyperlink{class_menu_aad01d0f840a8be08e301d24d17b00b96}{parse\+Choice} ()
+\item 
+virtual void \hyperlink{class_menu_afd50901663e9f9b1210ba9ef7512c02d}{exit\+Program} ()
+\item 
+virtual string \hyperlink{class_menu_ab5b08e13a2db9ae41ac9e9696473a143}{get\+Suffix} ()
+\item 
+virtual bool \hyperlink{class_menu_ac759d0525a0736f421e8dfd443b1177c}{get\+Iterator\+Params} (\hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679c}{Iterator\+::\+Iterator\+Status} \&status, \hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430}{Iterator\+::\+Random\+Types} \&type, string \&file\+Name, string \&suffix, int \&num\+Of\+Genes)
+\item 
+virtual void \hyperlink{class_menu_a893fd3c7d9e4bc5e32d4e2e20d8da804}{get\+Simulator\+Params} (int \&num\+Of\+Genes, int \&simulate\+Type, string \&suffix)
+\item 
+virtual void \hyperlink{class_menu_a27538c5e2650251e98ed91257b0a2ba8}{test\+All\+On\+Simulator} ()
+\item 
+virtual void \hyperlink{class_menu_a4ff4dfbd63a558ed2a6aa79fbde05eba}{test\+All\+On\+Iterator} (\hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679c}{Iterator\+::\+Iterator\+Status} status)
+\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+This is a concrete controller class for the application. 
+
+This class is a subclass of the \char`\"{}\+Interactor\char`\"{} that also implements the \char`\"{}\+Displayer\char`\"{} interface. This class serves as a controller that gets user choice using \char`\"{}\+Displayer\char`\"{} interface methods and process it using \char`\"{}\+Interactor\char`\"{} class methods. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_menu_a3fbf0f02d6875bc41c4ee42597d99ff1}{\index{Menu@{Menu}!check\+Matrix@{check\+Matrix}}
+\index{check\+Matrix@{check\+Matrix}!Menu@{Menu}}
+\paragraph[{check\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::check\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+Matrix} $\ast$}]{transition}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_menu_a3fbf0f02d6875bc41c4ee42597d99ff1}
+Prints the transition matrix to standard output and ask the user to ensure the correctness of the matrix. 
+\begin{DoxyParams}{Parameters}
+{\em transition} & A pointer reference to the matrix to be checked. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_displayer_1_1_displayer_class_a9b9ea4661b05a211763792e392f3cdd5}{Displayer\+::\+Displayer\+Class}.
+
+\hypertarget{class_menu_a616bae73f48b58a1b5629354826c30cc}{\index{Menu@{Menu}!display\+Message@{display\+Message}}
+\index{display\+Message@{display\+Message}!Menu@{Menu}}
+\paragraph[{display\+Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Menu\+::display\+Message (
+\begin{DoxyParamCaption}
+\item[{string}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_menu_a616bae73f48b58a1b5629354826c30cc}
+Specific implementation of abstract method in \char`\"{}\+Displayer\char`\"{} interface. This method prints a message to console output. 
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to be shown. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_displayer_1_1_displayer_class_ae572acc400418de40d2977a7b5556d45}{Displayer\+::\+Displayer\+Class}.
+
+\hypertarget{class_menu_afd50901663e9f9b1210ba9ef7512c02d}{\index{Menu@{Menu}!exit\+Program@{exit\+Program}}
+\index{exit\+Program@{exit\+Program}!Menu@{Menu}}
+\paragraph[{exit\+Program}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::exit\+Program (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_menu_afd50901663e9f9b1210ba9ef7512c02d}
+Display a \char`\"{}\+Process Complete\char`\"{} message then directly exit the program. 
+
+Implements \hyperlink{class_displayer_1_1_displayer_class_a1ae1ffba6ab3b1effad2b042e2868ac4}{Displayer\+::\+Displayer\+Class}.
+
+\hypertarget{class_menu_a2243881fe17494a0f6fc38a9211715d6}{\index{Menu@{Menu}!get\+Choice@{get\+Choice}}
+\index{get\+Choice@{get\+Choice}!Menu@{Menu}}
+\paragraph[{get\+Choice}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::get\+Choice (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_a2243881fe17494a0f6fc38a9211715d6}
+Get the choice from the user by taking in input from c++ standard keyboard input. 
+
+Implements \hyperlink{class_displayer_1_1_displayer_class_ac61f3852eda7fe91a189927d33d4aef5}{Displayer\+::\+Displayer\+Class}.
+
+\hypertarget{class_menu_ac759d0525a0736f421e8dfd443b1177c}{\index{Menu@{Menu}!get\+Iterator\+Params@{get\+Iterator\+Params}}
+\index{get\+Iterator\+Params@{get\+Iterator\+Params}!Menu@{Menu}}
+\paragraph[{get\+Iterator\+Params}]{\setlength{\rightskip}{0pt plus 5cm}bool Menu\+::get\+Iterator\+Params (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator\+::\+Iterator\+Status} \&}]{status, }
+\item[{{\bf Iterator\+::\+Random\+Types} \&}]{type, }
+\item[{string \&}]{file\+Name, }
+\item[{string \&}]{suffix, }
+\item[{int \&}]{num\+Of\+Genes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_menu_ac759d0525a0736f421e8dfd443b1177c}
+Get the necessary parameters for initializing an \char`\"{}\+Iterator\char`\"{} instance. Information will be prompted to user from standard output.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Status of the \char`\"{}\+Iterator\char`\"{}, can be \char`\"{}\+P\+R\+O\+V\+I\+D\+E\+D\char`\"{} or \char`\"{}\+S\+I\+M\+U\+L\+A\+T\+E\+D\char`\"{}; \\
+\hline
+{\em type} & Type of algorithms used for decomposition; \\
+\hline
+{\em file\+Name} & The file name of the file storing the transition matrix; \\
+\hline
+{\em suffix} & Suffix obtained from user; \\
+\hline
+{\em num\+Of\+Genes} & The number of genes corresponding to the file with {\itshape  file\+Name } \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\itshape \char`\"{}\+True\char`\"{}} if the \char`\"{}\+Iterator\char`\"{} is initialized in \char`\"{}\+Default\char`\"{} mode.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function is an implementation of a function prototype from \char`\"{}\+Interactor\char`\"{} class. Implementation should be different depending on different types of user interaction. This is how it is used \+: 
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (\hyperlink{class_menu_ac759d0525a0736f421e8dfd443b1177c}{getIteratorParams}(status, type, fileName, suffix, numOfGenes))\{
+    myIterator = \textcolor{keyword}{new} \hyperlink{class_iterator}{Iterator}();
+\}\textcolor{keywordflow}{else}\{
+     myIterator = \textcolor{keyword}{new} \hyperlink{class_iterator}{Iterator}(status, type);
+\}
+\hyperlink{class_interactor_ab67e4ff9ff5d44ee2001e7700dfeb164}{initializeIterator}(suffix, fileName, numOfGenes);
+\end{DoxyCode}
+
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_interactor_aeb10be4d589b66a8624d7221f7600f87}{Interactor\+::initialize\+Iterator(string, string, int)}.
+\end{DoxySeeAlso}
+\begin{DoxyWarning}{Warning}
+This method must be implemented, or the initialization process cannot complete. 
+\end{DoxyWarning}
+
+
+Implements \hyperlink{class_interactor_a6e98daf626d09b585375eec2d5311f25}{Interactor}.
+
+\hypertarget{class_menu_a893fd3c7d9e4bc5e32d4e2e20d8da804}{\index{Menu@{Menu}!get\+Simulator\+Params@{get\+Simulator\+Params}}
+\index{get\+Simulator\+Params@{get\+Simulator\+Params}!Menu@{Menu}}
+\paragraph[{get\+Simulator\+Params}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::get\+Simulator\+Params (
+\begin{DoxyParamCaption}
+\item[{int \&}]{num\+Of\+Genes, }
+\item[{int \&}]{simulate\+Type, }
+\item[{string \&}]{suffix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_menu_a893fd3c7d9e4bc5e32d4e2e20d8da804}
+Get the necessary parameters for initializing a \char`\"{}\+Simulator\char`\"{} instance. Information will be prompted to user from standard output.
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+Of\+Genes} & The number of genes to simulate. \\
+\hline
+{\em simulate\+Type} & The type for simulation, either S\+P\+R\+A\+S\+E or F\+O\+R\+W\+A\+R\+D. \\
+\hline
+{\em suffix} & The file suffix added to the end of the output files. Implementation should be different depending on different types of user interaction. This is how it is used \+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} numOfGenes, simulateType;
+\textcolor{keywordtype}{string} suffix;
+\hyperlink{class_menu_a893fd3c7d9e4bc5e32d4e2e20d8da804}{getSimulatorParams}(numOfGenes, simulateType, suffix);
+\hyperlink{class_interactor_a8416bb98d11e11b841db245e93c98853}{initializeSimulator}(numOfGenes, simulateType, suffix);
+\end{DoxyCode}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_interactor_a1a9260b3dbc1c1f87933f98fadedb979}{Interactor\+::initialize\+Simulator(int, int, string)}.
+\end{DoxySeeAlso}
+\begin{DoxyWarning}{Warning}
+This method must be implemented, or the initialization process cannot complete. 
+\end{DoxyWarning}
+
+
+Implements \hyperlink{class_interactor_a63d581b5afbf258b25915b318c1216c7}{Interactor}.
+
+\hypertarget{class_menu_ab5b08e13a2db9ae41ac9e9696473a143}{\index{Menu@{Menu}!get\+Suffix@{get\+Suffix}}
+\index{get\+Suffix@{get\+Suffix}!Menu@{Menu}}
+\paragraph[{get\+Suffix}]{\setlength{\rightskip}{0pt plus 5cm}string Menu\+::get\+Suffix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_menu_ab5b08e13a2db9ae41ac9e9696473a143}
+Get the file suffix from user by prompting a message to standard output. \begin{DoxyReturn}{Returns}
+The suffix entered by the user. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_interactor_af3d8accfc60634bf82be9c438c0b9400}{Interactor}.
+
+\hypertarget{class_menu_aad01d0f840a8be08e301d24d17b00b96}{\index{Menu@{Menu}!parse\+Choice@{parse\+Choice}}
+\index{parse\+Choice@{parse\+Choice}!Menu@{Menu}}
+\paragraph[{parse\+Choice}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::parse\+Choice (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_menu_aad01d0f840a8be08e301d24d17b00b96}
+A method to parse the choice from user. Deciding which mehod to call upon each choice. 
+
+Implements \hyperlink{class_displayer_1_1_displayer_class_a84478e90e6895f0061268c59d2040cc4}{Displayer\+::\+Displayer\+Class}.
+
+\hypertarget{class_menu_ab19f32f8deac0f6c6960f04be8612067}{\index{Menu@{Menu}!show\+Menu@{show\+Menu}}
+\index{show\+Menu@{show\+Menu}!Menu@{Menu}}
+\paragraph[{show\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::show\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_menu_ab19f32f8deac0f6c6960f04be8612067}
+The method that shows the menu to user. This implementation will print the menu to the console output. The information of the menu is stored in the namespace \char`\"{}\+Displayer\char`\"{}. 
+
+Implements \hyperlink{class_displayer_1_1_displayer_class_aa259ca88fafe20ad118cb8a492c88351}{Displayer\+::\+Displayer\+Class}.
+
+\hypertarget{class_menu_a4ff4dfbd63a558ed2a6aa79fbde05eba}{\index{Menu@{Menu}!test\+All\+On\+Iterator@{test\+All\+On\+Iterator}}
+\index{test\+All\+On\+Iterator@{test\+All\+On\+Iterator}!Menu@{Menu}}
+\paragraph[{test\+All\+On\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::test\+All\+On\+Iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator\+::\+Iterator\+Status}}]{status}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_menu_a4ff4dfbd63a558ed2a6aa79fbde05eba}
+Test all prepared iteration cases, either P\+R\+O\+V\+I\+D\+E\+D or S\+I\+M\+U\+L\+A\+T\+E\+D 
+\begin{DoxyParams}{Parameters}
+{\em status} & Input file type. P\+R\+O\+V\+I\+D\+E\+D or S\+I\+M\+U\+L\+A\+T\+E\+D. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_interactor_aeeec69df23673e87530a1b1db98998ee}{Interactor}.
+
+\hypertarget{class_menu_a27538c5e2650251e98ed91257b0a2ba8}{\index{Menu@{Menu}!test\+All\+On\+Simulator@{test\+All\+On\+Simulator}}
+\index{test\+All\+On\+Simulator@{test\+All\+On\+Simulator}!Menu@{Menu}}
+\paragraph[{test\+All\+On\+Simulator}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\+::test\+All\+On\+Simulator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_menu_a27538c5e2650251e98ed91257b0a2ba8}
+Test all prepared simulation cases. 
+
+Implements \hyperlink{class_interactor_ac2282b0725d5bd6216edb0f2ea4dd421}{Interactor}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_menu_8h}{Menu.\+h}\item 
+Menu.\+cpp\end{DoxyCompactItemize}

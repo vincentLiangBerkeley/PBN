@@ -1,0 +1,4 @@
+div.image img[src="test.png"]{ 
+    width:50%;
+    margin-left: 0;
+}

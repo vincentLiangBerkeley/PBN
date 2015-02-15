@@ -1,0 +1,186 @@
+\hypertarget{classt_matrix}{\subsection{t\+Matrix Class Reference}
+\label{classt_matrix}\index{t\+Matrix@{t\+Matrix}}
+}
+
+
+Internal data structure representing a matrix that has constant column sums.  
+
+
+
+
+{\ttfamily \#include $<$t\+Matrix.\+h$>$}
+
+Inheritance diagram for t\+Matrix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classt_matrix}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classt_matrix_a58e483fc473143ff57c2d821caf047e4}{t\+Matrix} (const \hyperlink{classr_matrix}{r\+Matrix} \&base)
+\item 
+double \hyperlink{classt_matrix_a98e50b73500855a69245ca57303085b1}{module} ()
+\item 
+void \hyperlink{classt_matrix_a52d5417362388c95db488ee6c8e008fa}{set} (int i, int j, double value)
+\item 
+map$<$ int, double $>$ \hyperlink{classt_matrix_a403a16974063512eb8c384f4b681d946}{get} (int col) const 
+\item 
+\hyperlink{classt_matrix}{t\+Matrix} \& \hyperlink{classt_matrix_a4308bb70d63f0301ca2e1fcacac77beb}{operator+=} (const \hyperlink{classt_matrix}{t\+Matrix} \&rhs)
+\item 
+virtual void \hyperlink{classt_matrix_a7e1b5623978bf16ace999ce22a28d350}{print} (ostream \&output)
+\end{DoxyCompactItemize}
+\subsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classt_matrix}{t\+Matrix} \hyperlink{classt_matrix_aa782f22b376682aca4fd61ac9e6358e5}{times} (\hyperlink{classr_matrix}{r\+Matrix} lhs, const double k)
+\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ map$<$ int, double $>$ $>$ \hyperlink{classt_matrix_a3d962506eec7f8d0f65cb2d50e5b81bc}{matrix}
+\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Internal data structure representing a matrix that has constant column sums. 
+
+This matrix inherit the \char`\"{}print\char`\"{} method from \hyperlink{class_abstract_matrix}{Abstract\+Matrix} to print the matrix as $n\times n$ matrix to an output stream. 
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classt_matrix_a58e483fc473143ff57c2d821caf047e4}{\index{t\+Matrix@{t\+Matrix}!t\+Matrix@{t\+Matrix}}
+\index{t\+Matrix@{t\+Matrix}!t\+Matrix@{t\+Matrix}}
+\paragraph[{t\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}t\+Matrix\+::t\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf r\+Matrix} \&}]{base}
+\end{DoxyParamCaption}
+)}}\label{classt_matrix_a58e483fc473143ff57c2d821caf047e4}
+Construct a \hyperlink{classt_matrix}{t\+Matrix} using an \hyperlink{classr_matrix}{r\+Matrix} instance. The matrices are the same, but this instance supports \hyperlink{classt_matrix}{t\+Matrix} operations.
+
+\begin{DoxyNote}{Note}
+Typical usage \+: \hyperlink{classt_matrix}{t\+Matrix} transition(\+R); 
+\end{DoxyNote}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classt_matrix_a403a16974063512eb8c384f4b681d946}{\index{t\+Matrix@{t\+Matrix}!get@{get}}
+\index{get@{get}!t\+Matrix@{t\+Matrix}}
+\paragraph[{get}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ int, double $>$ t\+Matrix\+::get (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+) const}}\label{classt_matrix_a403a16974063512eb8c384f4b681d946}
+Get the colth column of the matrix. 
+\begin{DoxyParams}{Parameters}
+{\em col} & Column number; \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The colth column as a map from int to double 
+\end{DoxyReturn}
+\hypertarget{classt_matrix_a98e50b73500855a69245ca57303085b1}{\index{t\+Matrix@{t\+Matrix}!module@{module}}
+\index{module@{module}!t\+Matrix@{t\+Matrix}}
+\paragraph[{module}]{\setlength{\rightskip}{0pt plus 5cm}double t\+Matrix\+::module (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classt_matrix_a98e50b73500855a69245ca57303085b1}
+Calculates the Frobinous module of the matrix as \+: $ \sqrt{\sum_{i, j}{a_{ij}^2}}$.
+
+\begin{DoxyReturn}{Returns}
+The module of the matrix 
+\end{DoxyReturn}
+\hypertarget{classt_matrix_a4308bb70d63f0301ca2e1fcacac77beb}{\index{t\+Matrix@{t\+Matrix}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!t\+Matrix@{t\+Matrix}}
+\paragraph[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+Matrix} \& t\+Matrix\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf t\+Matrix} \&}]{rhs}
+\end{DoxyParamCaption}
+)}}\label{classt_matrix_a4308bb70d63f0301ca2e1fcacac77beb}
+Defines addition between transition matrices.
+
+\begin{DoxyNote}{Note}
+Typical usage \+:
+\begin{DoxyCode}
+transition += anotherTransition; 
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+\hypertarget{classt_matrix_a7e1b5623978bf16ace999ce22a28d350}{\index{t\+Matrix@{t\+Matrix}!print@{print}}
+\index{print@{print}!t\+Matrix@{t\+Matrix}}
+\paragraph[{print}]{\setlength{\rightskip}{0pt plus 5cm}void t\+Matrix\+::print (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classt_matrix_a7e1b5623978bf16ace999ce22a28d350}
+Print the matrix in a n by n matrix form to the output stream 
+\begin{DoxyParams}{Parameters}
+{\em output} & The stream for output \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_abstract_matrix_a300f90398cb2bac75c8d2ab56bdde1ab}{Abstract\+Matrix}.
+
+\hypertarget{classt_matrix_a52d5417362388c95db488ee6c8e008fa}{\index{t\+Matrix@{t\+Matrix}!set@{set}}
+\index{set@{set}!t\+Matrix@{t\+Matrix}}
+\paragraph[{set}]{\setlength{\rightskip}{0pt plus 5cm}void t\+Matrix\+::set (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}}\label{classt_matrix_a52d5417362388c95db488ee6c8e008fa}
+Set the ith row jth column entry to the given value. 
+\begin{DoxyParams}{Parameters}
+{\em i} & Row number; \\
+\hline
+{\em j} & Column number; \\
+\hline
+{\em value} & The value to set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classt_matrix_aa782f22b376682aca4fd61ac9e6358e5}{\index{t\+Matrix@{t\+Matrix}!times@{times}}
+\index{times@{times}!t\+Matrix@{t\+Matrix}}
+\paragraph[{times}]{\setlength{\rightskip}{0pt plus 5cm}{\bf t\+Matrix} t\+Matrix\+::times (
+\begin{DoxyParamCaption}
+\item[{{\bf r\+Matrix}}]{lhs, }
+\item[{const double}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classt_matrix_aa782f22b376682aca4fd61ac9e6358e5}
+Defines scalar multiplication on boolean matrix. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The boolean matrix to multiply on; \\
+\hline
+{\em k} & The scalar; \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \hyperlink{classt_matrix}{t\+Matrix} instance as the result of the scalar multiplication
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Typical usage \+:
+\begin{DoxyCode}
+\hyperlink{classt_matrix}{tMatrix} transition = \hyperlink{classt_matrix_aa782f22b376682aca4fd61ac9e6358e5}{tMatrix::times}(R, k); 
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classt_matrix_a3d962506eec7f8d0f65cb2d50e5b81bc}{\index{t\+Matrix@{t\+Matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!t\+Matrix@{t\+Matrix}}
+\paragraph[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$map$<$int, double$>$ $>$ t\+Matrix\+::matrix\hspace{0.3cm}{\ttfamily [private]}}}\label{classt_matrix_a3d962506eec7f8d0f65cb2d50e5b81bc}
+A vector of map$<$int, double$>$ storing the entries of the matrix. The matrix\mbox{[}j\mbox{]}\mbox{[}i\mbox{]} represents the (i, j)th entry of the matrix.
+
+\begin{DoxyNote}{Note}
+Only non-\/zero entries are stored, zero entries cannot be found in any of the maps. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{t_matrix_8h}{t\+Matrix.\+h}\item 
+t\+Matrix.\+cpp\end{DoxyCompactItemize}

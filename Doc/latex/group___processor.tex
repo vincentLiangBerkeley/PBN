@@ -1,0 +1,21 @@
+\hypertarget{group___processor}{\subsection{Processor}
+\label{group___processor}\index{Processor@{Processor}}
+}
+
+
+This group contains classes for actual processing of data, both simulation and inverse iteration.  
+
+
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_iterator}{Iterator}
+\begin{DoxyCompactList}\small\item\em This class encapsulates the functionality of an inverse iterator. \end{DoxyCompactList}\item 
+class \hyperlink{class_simulator}{Simulator}
+\begin{DoxyCompactList}\small\item\em This is a class that handles simulation process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+This group contains classes for actual processing of data, both simulation and inverse iteration. 
+
+The classes in this module are \hyperlink{class_iterator}{Iterator} and \hyperlink{class_simulator}{Simulator}, serve the purposes of backward iterations and forward simulations. The usage of these two classes follows the pattern of \char`\"{}\+Initialization-\/\+Configuration-\/\+Start\char`\"{}. In the \char`\"{}\+Initialization\char`\"{} phase, the user will be asked to input necessary parameters like \char`\"{}\+Input file name\char`\"{}, \char`\"{}\+Number of Genes\char`\"{}, \char`\"{}\+File Suffix\char`\"{}. In the \char`\"{}\+Configuration\char`\"{} phase, the user has the opportunity of configuring the processor objects to the proper state like \char`\"{}\+O\+P\+T\+I\+M\+A\+L\char`\"{} or \char`\"{}\+C\+U\+B\+I\+C\char`\"{} algorithm in the inverse problem. After that, the objects will start running, generating messages indicating their states. 

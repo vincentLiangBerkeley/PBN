@@ -1,0 +1,4 @@
+\form#0:$n$
+\form#1:$2^n$
+\form#2:$n\times n$
+\form#3:$ \sqrt{\sum_{i, j}{a_{ij}^2}}$

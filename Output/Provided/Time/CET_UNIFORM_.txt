@@ -1,0 +1,2 @@
+Elapsed time is: 4.93805
+Average elapsed time per iteration is: 0.00493805

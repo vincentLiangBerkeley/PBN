@@ -1,0 +1,106 @@
+\hypertarget{class_simulator}{\subsection{Simulator Class Reference}
+\label{class_simulator}\index{Simulator@{Simulator}}
+}
+
+
+This is a class that handles simulation process.  
+
+
+
+
+{\ttfamily \#include $<$Simulator.\+h$>$}
+
+Inheritance diagram for Simulator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simulator}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_simulator_a252d919d45b1789b7fa809e8ac6d8c63}{simulate} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_simulator_ab05f5807293d42624526d1f3fe6aab71}{generate\+Transition} (int n)
+\item 
+void \hyperlink{class_simulator_aced31482cc73fa28ac9067325c9dd185}{generate\+Transition} (int n, int m, ostream \&output)
+\item 
+virtual string \hyperlink{class_simulator_a1270d2e2eeaa4aa3284e2d74a8644bc3}{save\+Matrix} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+This is a class that handles simulation process. 
+
+The \hyperlink{class_simulator}{Simulator} class serves to simulate transition matrix with a given number of genes. There are two types of simulation\+: S\+P\+A\+R\+S\+E and F\+O\+R\+W\+A\+R\+D. The S\+P\+A\+R\+S\+E simulation will control the number of non-\/zero entries in each column below the number of genes.
+
+The F\+O\+R\+W\+A\+R\+D simulation will simulate 10 B\+Ns and their corresponding weights and construct a final transition matrix. But the result of this simulation is not guaranteed to be sparse, especially when the number of genes are small. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_simulator_ab05f5807293d42624526d1f3fe6aab71}{\index{Simulator@{Simulator}!generate\+Transition@{generate\+Transition}}
+\index{generate\+Transition@{generate\+Transition}!Simulator@{Simulator}}
+\paragraph[{generate\+Transition}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::generate\+Transition (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_simulator_ab05f5807293d42624526d1f3fe6aab71}
+The method for generating S\+P\+A\+R\+S\+E transition matrix. 
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of genes to simulate \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_simulator_aced31482cc73fa28ac9067325c9dd185}{\index{Simulator@{Simulator}!generate\+Transition@{generate\+Transition}}
+\index{generate\+Transition@{generate\+Transition}!Simulator@{Simulator}}
+\paragraph[{generate\+Transition}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::generate\+Transition (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{int}]{m, }
+\item[{ostream \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_simulator_aced31482cc73fa28ac9067325c9dd185}
+The method for generating F\+O\+R\+W\+A\+R\+D transition matrix. 
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of genes to simulate \\
+\hline
+{\em m} & The number of B\+Ns used in simulation. The default value is 10 \\
+\hline
+{\em output} & An output stream to save the B\+Ns and their weights \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_simulator_a1270d2e2eeaa4aa3284e2d74a8644bc3}{\index{Simulator@{Simulator}!save\+Matrix@{save\+Matrix}}
+\index{save\+Matrix@{save\+Matrix}!Simulator@{Simulator}}
+\paragraph[{save\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}string Simulator\+::save\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_simulator_a1270d2e2eeaa4aa3284e2d74a8644bc3}
+Saves the transition matrix to current file. \begin{DoxyReturn}{Returns}
+Returns the full path of the file. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_file_coordinator_a913c584fd94fdcacd120bf6f52819aad}{File\+Coordinator}.
+
+\hypertarget{class_simulator_a252d919d45b1789b7fa809e8ac6d8c63}{\index{Simulator@{Simulator}!simulate@{simulate}}
+\index{simulate@{simulate}!Simulator@{Simulator}}
+\paragraph[{simulate}]{\setlength{\rightskip}{0pt plus 5cm}string Simulator\+::simulate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_simulator_a252d919d45b1789b7fa809e8ac6d8c63}
+The main method available for clients. After setting the number of genes and type of simulation, the client needs only to call this method to simulate and save results in output files. \begin{DoxyReturn}{Returns}
+A message indicating location and type of simulation.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_interactor_a60a3be74e1e954f23182fab7b638164e}{Interactor\+::start\+Simulator} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_simulator_8h}{Simulator.\+h}\item 
+Simulator.\+cpp\end{DoxyCompactItemize}

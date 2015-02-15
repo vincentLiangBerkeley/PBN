@@ -1,0 +1,307 @@
+\hypertarget{class_iterator}{\subsection{Iterator Class Reference}
+\label{class_iterator}\index{Iterator@{Iterator}}
+}
+
+
+This class encapsulates the functionality of an inverse iterator.  
+
+
+
+
+{\ttfamily \#include $<$Iterator.\+h$>$}
+
+Inheritance diagram for Iterator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_iterator}
+\end{center}
+\end{figure}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679c}{Iterator\+Status} \{ \hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679ca4628ad7429670e1077771e61b8bf62e8}{S\+I\+M\+U\+L\+A\+T\+E\+D}, 
+\hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679ca5988fd5ab1694c99fea267cb1bd5b980}{P\+R\+O\+V\+I\+D\+E\+D}, 
+\hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679ca47bbd9862188e6e2599aeb2396c39465}{E\+R\+R\+O\+R}, 
+\hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679caf2fc3a710537acfd818d4b982779176e}{R\+E\+A\+D\+Y}
+ \}
+\begin{DoxyCompactList}\small\item\em The status of the \hyperlink{class_iterator}{Iterator}, what kind of input file it is dealing with. \end{DoxyCompactList}\item 
+enum \hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430}{Random\+Types} \{ \\*
+\hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a1376e2aba7a2d8ff9240ed369a5bc08b}{Q\+U\+A\+D\+R\+A\+T\+I\+C}, 
+\hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a44ed6f57f51bfc11730908f722fdbb5f}{U\+N\+I\+F\+O\+R\+M}, 
+\hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430aad4185989c35b8c829dcafe0522ac05d}{C\+U\+B\+I\+C}, 
+\hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a0df1706a866c50be36b9fe29db81af26}{M\+A\+X\+I\+M\+U\+M}, 
+\\*
+\hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430ac26704076bf61ec7a63ef3ece6440a05}{O\+P\+T\+I\+M\+A\+L}, 
+\hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a6a17018cada1b3e646688ff845888f8d}{D\+E\+F\+A\+U\+L\+T}
+ \}
+\begin{DoxyCompactList}\small\item\em The algorithms used to conduct the inverse iteration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_iterator_ab920b49c3035b9ca62557f9c211a9a12}{Iterator} (\hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679c}{Iterator\+Status} status=\hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679ca5988fd5ab1694c99fea267cb1bd5b980}{P\+R\+O\+V\+I\+D\+E\+D}, \hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430}{Random\+Types} types=\hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430ac26704076bf61ec7a63ef3ece6440a05}{O\+P\+T\+I\+M\+A\+L})
+\item 
+void \hyperlink{class_iterator_a39dd825e64aad150068b7b482685f264}{iterate} ()
+\item 
+bool \hyperlink{class_iterator_aff62fb96b13fa2d1d9ec489d413f7f54}{sanity\+Check} ()
+\item 
+virtual \hyperlink{class_file_coordinator_a87882b51519fff558b11f4862a021318}{file\+States} \hyperlink{class_iterator_a3da499aae907e1d3c1e98d41d986718b}{read\+File} (string file\+Name, int num\+Of\+Genes)
+\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ string $>$ \hyperlink{class_iterator_ad223ae399ddcff5d47b4991cf981932c}{R\+A\+N\+D\+O\+M\+\_\+\+T\+Y\+P\+E}
+\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_iterator_ac6937ada533622f876cabb537a1718c3}{iterate\+Once} ()
+\item 
+double \hyperlink{class_iterator_a2f3034192d0795b138b623a9101be1d0}{deterministic\+Iterate} ()
+\item 
+double \hyperlink{class_iterator_a1706477265276cdc503b99be64e63c12}{calculate\+Entropy} (vector$<$ double $>$ \&input\+Weights)
+\item 
+int \hyperlink{class_iterator_a94446a4d14889f3e9f354775916fd9b9}{choose\+Entry} (map$<$ int, double $>$ \&column, \hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430}{Random\+Types} type=\hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a1376e2aba7a2d8ff9240ed369a5bc08b}{Q\+U\+A\+D\+R\+A\+T\+I\+C})
+\item 
+virtual void \hyperlink{class_iterator_a17d24545df8bc3245ef4d31928a85186}{save\+Vector} (vector$<$ double $>$ \&stats, \hyperlink{class_file_coordinator_a3675d464de774750ec143958d199891e}{save\+Types} type)
+\item 
+virtual void \hyperlink{class_iterator_a2bd1f005ae0c283af59e9b5698934d88}{save\+Iteration} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+This class encapsulates the functionality of an inverse iterator. 
+
+The \hyperlink{class_iterator}{Iterator} inherits from \hyperlink{class_file_coordinator}{File\+Coordinator} to use the file-\/related manipulations. The methods used for iteration are separated into two categories \+: Random and Deterministic. The currently used \char`\"{}\+Optimal\char`\"{} algorithm is a deterministic algorithm. The algorithm and input file type for iteration could be set when initializing the object, like \+:
+
+
+\begin{DoxyCode}
+\hyperlink{class_iterator}{Iterator}* myIterator = \textcolor{keyword}{new} \hyperlink{class_iterator_ab920b49c3035b9ca62557f9c211a9a12}{Iterator}(IteratorStatus::PROVIDED, RandomTypes::OPTIMAL);
+\end{DoxyCode}
+ It can also be set later by invoking the \char`\"{}set\+Type\char`\"{} method, like\+:
+
+
+\begin{DoxyCode}
+myIterator->setType(RandomTypes::MAXIMUM);
+myIterator->setIteratorStatus(IteratorStatus::SIMULATED);
+\end{DoxyCode}
+
+
+To let the \hyperlink{class_iterator}{Iterator} object work, clients only need to call the public method \char`\"{}iterate\char`\"{} after configuration.
+
+
+\begin{DoxyCode}
+myIterator->\hyperlink{class_iterator_a39dd825e64aad150068b7b482685f264}{iterate}();
+\end{DoxyCode}
+ 
+
+\subsubsection{Member Enumeration Documentation}
+\hypertarget{class_iterator_a1eb24c519953c2a333ea4a345b0c679c}{\index{Iterator@{Iterator}!Iterator\+Status@{Iterator\+Status}}
+\index{Iterator\+Status@{Iterator\+Status}!Iterator@{Iterator}}
+\paragraph[{Iterator\+Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Iterator\+::\+Iterator\+Status}}}\label{class_iterator_a1eb24c519953c2a333ea4a345b0c679c}
+
+
+The status of the \hyperlink{class_iterator}{Iterator}, what kind of input file it is dealing with. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+I\+M\+U\+L\+A\+T\+E\+D@{S\+I\+M\+U\+L\+A\+T\+E\+D}!Iterator@{Iterator}}\index{Iterator@{Iterator}!S\+I\+M\+U\+L\+A\+T\+E\+D@{S\+I\+M\+U\+L\+A\+T\+E\+D}}\item[{\em 
+\hypertarget{class_iterator_a1eb24c519953c2a333ea4a345b0c679ca4628ad7429670e1077771e61b8bf62e8}{S\+I\+M\+U\+L\+A\+T\+E\+D}\label{class_iterator_a1eb24c519953c2a333ea4a345b0c679ca4628ad7429670e1077771e61b8bf62e8}
+}]\hyperlink{class_iterator}{Iterator} will iterate on S\+I\+M\+U\+L\+A\+T\+E\+D data. \index{P\+R\+O\+V\+I\+D\+E\+D@{P\+R\+O\+V\+I\+D\+E\+D}!Iterator@{Iterator}}\index{Iterator@{Iterator}!P\+R\+O\+V\+I\+D\+E\+D@{P\+R\+O\+V\+I\+D\+E\+D}}\item[{\em 
+\hypertarget{class_iterator_a1eb24c519953c2a333ea4a345b0c679ca5988fd5ab1694c99fea267cb1bd5b980}{P\+R\+O\+V\+I\+D\+E\+D}\label{class_iterator_a1eb24c519953c2a333ea4a345b0c679ca5988fd5ab1694c99fea267cb1bd5b980}
+}]\hyperlink{class_iterator}{Iterator} will iterate on P\+R\+O\+V\+I\+D\+E\+D real data. \index{E\+R\+R\+O\+R@{E\+R\+R\+O\+R}!Iterator@{Iterator}}\index{Iterator@{Iterator}!E\+R\+R\+O\+R@{E\+R\+R\+O\+R}}\item[{\em 
+\hypertarget{class_iterator_a1eb24c519953c2a333ea4a345b0c679ca47bbd9862188e6e2599aeb2396c39465}{E\+R\+R\+O\+R}\label{class_iterator_a1eb24c519953c2a333ea4a345b0c679ca47bbd9862188e6e2599aeb2396c39465}
+}]\hyperlink{class_iterator}{Iterator} is in error status. \index{R\+E\+A\+D\+Y@{R\+E\+A\+D\+Y}!Iterator@{Iterator}}\index{Iterator@{Iterator}!R\+E\+A\+D\+Y@{R\+E\+A\+D\+Y}}\item[{\em 
+\hypertarget{class_iterator_a1eb24c519953c2a333ea4a345b0c679caf2fc3a710537acfd818d4b982779176e}{R\+E\+A\+D\+Y}\label{class_iterator_a1eb24c519953c2a333ea4a345b0c679caf2fc3a710537acfd818d4b982779176e}
+}]\hyperlink{class_iterator}{Iterator} is ready to start working. \end{description}
+\end{Desc}
+\hypertarget{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430}{\index{Iterator@{Iterator}!Random\+Types@{Random\+Types}}
+\index{Random\+Types@{Random\+Types}!Iterator@{Iterator}}
+\paragraph[{Random\+Types}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Iterator\+::\+Random\+Types}}}\label{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430}
+
+
+The algorithms used to conduct the inverse iteration. 
+
+Although called \char`\"{}\+Random\+Types\char`\"{}, this enumeration actually contains both random and deterministic algorithms. Moreover, clients can add self-\/developed algorithms into the enumeration. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Q\+U\+A\+D\+R\+A\+T\+I\+C@{Q\+U\+A\+D\+R\+A\+T\+I\+C}!Iterator@{Iterator}}\index{Iterator@{Iterator}!Q\+U\+A\+D\+R\+A\+T\+I\+C@{Q\+U\+A\+D\+R\+A\+T\+I\+C}}\item[{\em 
+\hypertarget{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a1376e2aba7a2d8ff9240ed369a5bc08b}{Q\+U\+A\+D\+R\+A\+T\+I\+C}\label{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a1376e2aba7a2d8ff9240ed369a5bc08b}
+}]A random algorithm, refer to the report for details. \index{U\+N\+I\+F\+O\+R\+M@{U\+N\+I\+F\+O\+R\+M}!Iterator@{Iterator}}\index{Iterator@{Iterator}!U\+N\+I\+F\+O\+R\+M@{U\+N\+I\+F\+O\+R\+M}}\item[{\em 
+\hypertarget{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a44ed6f57f51bfc11730908f722fdbb5f}{U\+N\+I\+F\+O\+R\+M}\label{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a44ed6f57f51bfc11730908f722fdbb5f}
+}]A random algorithm, refer to the report for details. \index{C\+U\+B\+I\+C@{C\+U\+B\+I\+C}!Iterator@{Iterator}}\index{Iterator@{Iterator}!C\+U\+B\+I\+C@{C\+U\+B\+I\+C}}\item[{\em 
+\hypertarget{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430aad4185989c35b8c829dcafe0522ac05d}{C\+U\+B\+I\+C}\label{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430aad4185989c35b8c829dcafe0522ac05d}
+}]A random algorithm, refer to the report for details. \index{M\+A\+X\+I\+M\+U\+M@{M\+A\+X\+I\+M\+U\+M}!Iterator@{Iterator}}\index{Iterator@{Iterator}!M\+A\+X\+I\+M\+U\+M@{M\+A\+X\+I\+M\+U\+M}}\item[{\em 
+\hypertarget{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a0df1706a866c50be36b9fe29db81af26}{M\+A\+X\+I\+M\+U\+M}\label{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a0df1706a866c50be36b9fe29db81af26}
+}]Deterministic algorithm, refer to the report for details. \index{O\+P\+T\+I\+M\+A\+L@{O\+P\+T\+I\+M\+A\+L}!Iterator@{Iterator}}\index{Iterator@{Iterator}!O\+P\+T\+I\+M\+A\+L@{O\+P\+T\+I\+M\+A\+L}}\item[{\em 
+\hypertarget{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430ac26704076bf61ec7a63ef3ece6440a05}{O\+P\+T\+I\+M\+A\+L}\label{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430ac26704076bf61ec7a63ef3ece6440a05}
+}]Deterministic algorithm, refer to the report for details. \index{D\+E\+F\+A\+U\+L\+T@{D\+E\+F\+A\+U\+L\+T}!Iterator@{Iterator}}\index{Iterator@{Iterator}!D\+E\+F\+A\+U\+L\+T@{D\+E\+F\+A\+U\+L\+T}}\item[{\em 
+\hypertarget{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a6a17018cada1b3e646688ff845888f8d}{D\+E\+F\+A\+U\+L\+T}\label{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430a6a17018cada1b3e646688ff845888f8d}
+}]Ending mark of the enumeration. \end{description}
+\end{Desc}
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{class_iterator_ab920b49c3035b9ca62557f9c211a9a12}{\index{Iterator@{Iterator}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Iterator@{Iterator}}
+\paragraph[{Iterator}]{\setlength{\rightskip}{0pt plus 5cm}Iterator\+::\+Iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator\+::\+Iterator\+Status}}]{status = {\ttfamily {\bf P\+R\+O\+V\+I\+D\+E\+D}}, }
+\item[{{\bf Iterator\+::\+Random\+Types}}]{type = {\ttfamily {\bf O\+P\+T\+I\+M\+A\+L}}}
+\end{DoxyParamCaption}
+)}}\label{class_iterator_ab920b49c3035b9ca62557f9c211a9a12}
+Construct a new \hyperlink{class_iterator}{Iterator} object, and set its Iterator\+Status and Random\+Types. If no parameters provided, the default construction will use P\+R\+O\+V\+I\+D\+E\+D and O\+P\+T\+I\+M\+A\+L. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_iterator_a1706477265276cdc503b99be64e63c12}{\index{Iterator@{Iterator}!calculate\+Entropy@{calculate\+Entropy}}
+\index{calculate\+Entropy@{calculate\+Entropy}!Iterator@{Iterator}}
+\paragraph[{calculate\+Entropy}]{\setlength{\rightskip}{0pt plus 5cm}double Iterator\+::calculate\+Entropy (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$ \&}]{input\+Weights}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_iterator_a1706477265276cdc503b99be64e63c12}
+Helper function that calculates entropy of a given output. 
+\begin{DoxyParams}{Parameters}
+{\em input\+Weights} & A vector containing the weights of a specific iteration \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The entropy of this iteration 
+\end{DoxyReturn}
+\hypertarget{class_iterator_a94446a4d14889f3e9f354775916fd9b9}{\index{Iterator@{Iterator}!choose\+Entry@{choose\+Entry}}
+\index{choose\+Entry@{choose\+Entry}!Iterator@{Iterator}}
+\paragraph[{choose\+Entry}]{\setlength{\rightskip}{0pt plus 5cm}int Iterator\+::choose\+Entry (
+\begin{DoxyParamCaption}
+\item[{map$<$ int, double $>$ \&}]{column, }
+\item[{{\bf Random\+Types}}]{type = {\ttfamily {\bf Q\+U\+A\+D\+R\+A\+T\+I\+C}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_iterator_a94446a4d14889f3e9f354775916fd9b9}
+Helper method to choose a non-\/zero entry in the iteration process. This method chooses entry based on Random or Deterministic methods. Clients are also required to override or create new method for entry-\/choosing when testing self-\/developed algorithms. 
+\begin{DoxyParams}{Parameters}
+{\em column} & The column of the transition matrix to choose entry from \\
+\hline
+{\em type} & The type of entry choosing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The row number of the chosen entry.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This method is internally used by \hyperlink{class_iterator_ac6937ada533622f876cabb537a1718c3}{Iterator\+::iterate\+Once} and \hyperlink{class_iterator_a2f3034192d0795b138b623a9101be1d0}{Iterator\+::deterministic\+Iterate}. General usage is like \+: 
+\begin{DoxyCode}
+map<int, double>& column = copy.get(col);
+\textcolor{keywordtype}{int} chosenRow = \hyperlink{class_iterator_a94446a4d14889f3e9f354775916fd9b9}{chooseEntry}(column, type);
+\end{DoxyCode}
+ For detailed used, refer to Iterator.\+cpp 
+\end{DoxyNote}
+\hypertarget{class_iterator_a2f3034192d0795b138b623a9101be1d0}{\index{Iterator@{Iterator}!deterministic\+Iterate@{deterministic\+Iterate}}
+\index{deterministic\+Iterate@{deterministic\+Iterate}!Iterator@{Iterator}}
+\paragraph[{deterministic\+Iterate}]{\setlength{\rightskip}{0pt plus 5cm}double Iterator\+::deterministic\+Iterate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_iterator_a2f3034192d0795b138b623a9101be1d0}
+Perform the iteration for deterministic algorithms. \begin{DoxyReturn}{Returns}
+The entropy of the iteration. 
+\end{DoxyReturn}
+\hypertarget{class_iterator_a39dd825e64aad150068b7b482685f264}{\index{Iterator@{Iterator}!iterate@{iterate}}
+\index{iterate@{iterate}!Iterator@{Iterator}}
+\paragraph[{iterate}]{\setlength{\rightskip}{0pt plus 5cm}void Iterator\+::iterate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_iterator_a39dd825e64aad150068b7b482685f264}
+Main method for iteration. This is a \char`\"{}\+Strategy Pattern\char`\"{} design. The iterate method will check the Iterator\+Status and Random\+Type of the \hyperlink{class_iterator}{Iterator} object and determine which method will be used on which file.\textbackslash{}
+
+It will also save the results in output files after iteration. \hypertarget{class_iterator_ac6937ada533622f876cabb537a1718c3}{\index{Iterator@{Iterator}!iterate\+Once@{iterate\+Once}}
+\index{iterate\+Once@{iterate\+Once}!Iterator@{Iterator}}
+\paragraph[{iterate\+Once}]{\setlength{\rightskip}{0pt plus 5cm}double Iterator\+::iterate\+Once (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_iterator_ac6937ada533622f876cabb537a1718c3}
+Perform one iteration for random algorithms. \begin{DoxyReturn}{Returns}
+The entropy of this iteration.
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+For random algorithms, 1000 iterations will be performed and the iteration with least entropy will be selected. For implementation details, refer to Iterator.\+cpp. 
+\end{DoxyNote}
+\hypertarget{class_iterator_a3da499aae907e1d3c1e98d41d986718b}{\index{Iterator@{Iterator}!read\+File@{read\+File}}
+\index{read\+File@{read\+File}!Iterator@{Iterator}}
+\paragraph[{read\+File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Iterator\+::file\+States} Iterator\+::read\+File (
+\begin{DoxyParamCaption}
+\item[{string}]{file\+Name, }
+\item[{int}]{num\+Of\+Genes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_iterator_a3da499aae907e1d3c1e98d41d986718b}
+Read a transition matrix from input file. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The file name of the file. i.\+e \char`\"{}overall\char`\"{} for \char`\"{}overall.\+txt\char`\"{} \\
+\hline
+{\em num\+Of\+Genes} & Number of genes corresponding to the input files \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether the read-\/in process is successful. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_file_coordinator_a87882b51519fff558b11f4862a021318}{File\+Coordinator\+::file\+States} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \hyperlink{class_file_coordinator_a135715b1b9b4eaab42e061ebf9fd2459}{File\+Coordinator}.
+
+\hypertarget{class_iterator_aff62fb96b13fa2d1d9ec489d413f7f54}{\index{Iterator@{Iterator}!sanity\+Check@{sanity\+Check}}
+\index{sanity\+Check@{sanity\+Check}!Iterator@{Iterator}}
+\paragraph[{sanity\+Check}]{\setlength{\rightskip}{0pt plus 5cm}bool Iterator\+::sanity\+Check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_iterator_aff62fb96b13fa2d1d9ec489d413f7f54}
+A check of internal consistency of input by verifying that the column sums are ones. \begin{DoxyReturn}{Returns}
+True if the input file has no problem. 
+\end{DoxyReturn}
+\hypertarget{class_iterator_a2bd1f005ae0c283af59e9b5698934d88}{\index{Iterator@{Iterator}!save\+Iteration@{save\+Iteration}}
+\index{save\+Iteration@{save\+Iteration}!Iterator@{Iterator}}
+\paragraph[{save\+Iteration}]{\setlength{\rightskip}{0pt plus 5cm}void Iterator\+::save\+Iteration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_iterator_a2bd1f005ae0c283af59e9b5698934d88}
+Saves iteration information into current file. 
+
+Reimplemented from \hyperlink{class_file_coordinator_a53023597e8e80b9f6bb4f7edb16b098c}{File\+Coordinator}.
+
+\hypertarget{class_iterator_a17d24545df8bc3245ef4d31928a85186}{\index{Iterator@{Iterator}!save\+Vector@{save\+Vector}}
+\index{save\+Vector@{save\+Vector}!Iterator@{Iterator}}
+\paragraph[{save\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}void Iterator\+::save\+Vector (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$ \&}]{stats, }
+\item[{{\bf File\+Coordinator\+::save\+Types}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_iterator_a17d24545df8bc3245ef4d31928a85186}
+Saves a vector into the current file, depending on the parameters. 
+\begin{DoxyParams}{Parameters}
+{\em stats} & The vector data to save. \\
+\hline
+{\em type} & The save\+Type specifying the type of data. i.\+e E\+N\+T\+R\+O\+P\+Y, W\+E\+I\+G\+H\+T\+S \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_file_coordinator_a2d9b661099244a87012a4f7de9d3a120}{File\+Coordinator}.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{class_iterator_ad223ae399ddcff5d47b4991cf981932c}{\index{Iterator@{Iterator}!R\+A\+N\+D\+O\+M\+\_\+\+T\+Y\+P\+E@{R\+A\+N\+D\+O\+M\+\_\+\+T\+Y\+P\+E}}
+\index{R\+A\+N\+D\+O\+M\+\_\+\+T\+Y\+P\+E@{R\+A\+N\+D\+O\+M\+\_\+\+T\+Y\+P\+E}!Iterator@{Iterator}}
+\paragraph[{R\+A\+N\+D\+O\+M\+\_\+\+T\+Y\+P\+E}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ string $>$ Iterator\+::\+R\+A\+N\+D\+O\+M\+\_\+\+T\+Y\+P\+E\hspace{0.3cm}{\ttfamily [static]}}}\label{class_iterator_ad223ae399ddcff5d47b4991cf981932c}
+A static container of names of iteration algorithms. This vector is initialized in Analyzer.\+cpp. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_iterator_8h}{Iterator.\+h}\item 
+Analyzer.\+cpp\item 
+Iterator.\+cpp\end{DoxyCompactItemize}

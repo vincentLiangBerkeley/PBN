@@ -1,0 +1,75 @@
+\hypertarget{class_abstract_matrix}{\subsection{Abstract\+Matrix Class Reference}
+\label{class_abstract_matrix}\index{Abstract\+Matrix@{Abstract\+Matrix}}
+}
+
+
+This class defines some of the basic operations we need for our matrix.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\+Matrix.\+h$>$}
+
+Inheritance diagram for Abstract\+Matrix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_abstract_matrix}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{class_abstract_matrix_a8aa21743b81e47939757beda61b33dfd}{get\+Size} () const 
+\item 
+virtual void \hyperlink{class_abstract_matrix_a300f90398cb2bac75c8d2ab56bdde1ab}{print} (ostream \&output)=0
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_abstract_matrix_aca80e2403cf7903a106595ba56390e99}{size}
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+This class defines some of the basic operations we need for our matrix. 
+
+This is the basic abstract square matrix class, and all Boolean Network matrix and transition matrix should inherit from this class. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_abstract_matrix_a8aa21743b81e47939757beda61b33dfd}{\index{Abstract\+Matrix@{Abstract\+Matrix}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Abstract\+Matrix@{Abstract\+Matrix}}
+\paragraph[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Abstract\+Matrix\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_abstract_matrix_a8aa21743b81e47939757beda61b33dfd}
+Simple getter for the matrix, suppose the matrix is constructed with $n$ genes, then the size is $2^n$. \begin{DoxyReturn}{Returns}
+The number of rows for the matrix 
+\end{DoxyReturn}
+\hypertarget{class_abstract_matrix_a300f90398cb2bac75c8d2ab56bdde1ab}{\index{Abstract\+Matrix@{Abstract\+Matrix}!print@{print}}
+\index{print@{print}!Abstract\+Matrix@{Abstract\+Matrix}}
+\paragraph[{print}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Abstract\+Matrix\+::print (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{output}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_abstract_matrix_a300f90398cb2bac75c8d2ab56bdde1ab}
+Print the matrix in a n by n matrix form to the output stream 
+\begin{DoxyParams}{Parameters}
+{\em output} & The stream for output \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classt_matrix_a7e1b5623978bf16ace999ce22a28d350}{t\+Matrix}, and \hyperlink{classr_matrix_a2a22671198a516a8165306d5406e539b}{r\+Matrix}.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{class_abstract_matrix_aca80e2403cf7903a106595ba56390e99}{\index{Abstract\+Matrix@{Abstract\+Matrix}!size@{size}}
+\index{size@{size}!Abstract\+Matrix@{Abstract\+Matrix}}
+\paragraph[{size}]{\setlength{\rightskip}{0pt plus 5cm}int Abstract\+Matrix\+::size\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_abstract_matrix_aca80e2403cf7903a106595ba56390e99}
+The size of the square matrix, inherited by its children. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_abstract_matrix_8h}{Abstract\+Matrix.\+h}\end{DoxyCompactItemize}

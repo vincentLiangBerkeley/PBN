@@ -1,0 +1,131 @@
+\hypertarget{class_displayer_1_1_displayer_class}{\subsection{Displayer\+:\+:Displayer\+Class Class Reference}
+\label{class_displayer_1_1_displayer_class}\index{Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}}
+}
+
+
+Abstract interface for direct interation with end users.  
+
+
+
+
+{\ttfamily \#include $<$Displayer.\+h$>$}
+
+Inheritance diagram for Displayer\+:\+:Displayer\+Class\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_displayer_1_1_displayer_class}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_displayer_1_1_displayer_class_aa259ca88fafe20ad118cb8a492c88351}{show\+Menu} ()=0
+\item 
+virtual void \hyperlink{class_displayer_1_1_displayer_class_ac61f3852eda7fe91a189927d33d4aef5}{get\+Choice} ()=0
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_displayer_1_1_displayer_class_a13a8fff0d761fc68d208d5bb16429395}{char \hyperlink{class_displayer_1_1_displayer_class_a13a8fff0d761fc68d208d5bb16429395}{choice}}\label{class_displayer_1_1_displayer_class_a13a8fff0d761fc68d208d5bb16429395}
+
+\begin{DoxyCompactList}\small\item\em A character representing the choice of users. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_displayer_1_1_displayer_class_a84478e90e6895f0061268c59d2040cc4}{parse\+Choice} ()=0
+\item 
+virtual void \hyperlink{class_displayer_1_1_displayer_class_ae572acc400418de40d2977a7b5556d45}{display\+Message} (string message)=0
+\item 
+virtual void \hyperlink{class_displayer_1_1_displayer_class_a9b9ea4661b05a211763792e392f3cdd5}{check\+Matrix} (\hyperlink{classt_matrix}{t\+Matrix} $\ast$transition)=0
+\item 
+virtual void \hyperlink{class_displayer_1_1_displayer_class_a1ae1ffba6ab3b1effad2b042e2868ac4}{exit\+Program} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Abstract interface for direct interation with end users. 
+
+This class declares function prototypes for user interactions. Any controller class should implement this interface. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_displayer_1_1_displayer_class_a9b9ea4661b05a211763792e392f3cdd5}{\index{Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}!check\+Matrix@{check\+Matrix}}
+\index{check\+Matrix@{check\+Matrix}!Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}}
+\paragraph[{check\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Displayer\+::\+Displayer\+Class\+::check\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf t\+Matrix} $\ast$}]{transition}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}}\label{class_displayer_1_1_displayer_class_a9b9ea4661b05a211763792e392f3cdd5}
+Display the resulting matrix to end user for double-\/check. 
+\begin{DoxyParams}{Parameters}
+{\em transition} & A \hyperlink{classt_matrix}{t\+Matrix} instance to display \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_menu_a3fbf0f02d6875bc41c4ee42597d99ff1}{Menu}.
+
+\hypertarget{class_displayer_1_1_displayer_class_ae572acc400418de40d2977a7b5556d45}{\index{Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}!display\+Message@{display\+Message}}
+\index{display\+Message@{display\+Message}!Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}}
+\paragraph[{display\+Message}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Displayer\+::\+Displayer\+Class\+::display\+Message (
+\begin{DoxyParamCaption}
+\item[{string}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}}\label{class_displayer_1_1_displayer_class_ae572acc400418de40d2977a7b5556d45}
+Display a message to end user. 
+\begin{DoxyParams}{Parameters}
+{\em message} & The message to display. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_menu_a616bae73f48b58a1b5629354826c30cc}{Menu}.
+
+\hypertarget{class_displayer_1_1_displayer_class_a1ae1ffba6ab3b1effad2b042e2868ac4}{\index{Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}!exit\+Program@{exit\+Program}}
+\index{exit\+Program@{exit\+Program}!Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}}
+\paragraph[{exit\+Program}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Displayer\+::\+Displayer\+Class\+::exit\+Program (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}}\label{class_displayer_1_1_displayer_class_a1ae1ffba6ab3b1effad2b042e2868ac4}
+Action taken to exit the program. Specific behaviors when exiting could be included in this method. 
+
+Implemented in \hyperlink{class_menu_afd50901663e9f9b1210ba9ef7512c02d}{Menu}.
+
+\hypertarget{class_displayer_1_1_displayer_class_ac61f3852eda7fe91a189927d33d4aef5}{\index{Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}!get\+Choice@{get\+Choice}}
+\index{get\+Choice@{get\+Choice}!Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}}
+\paragraph[{get\+Choice}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Displayer\+::\+Displayer\+Class\+::get\+Choice (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_displayer_1_1_displayer_class_ac61f3852eda7fe91a189927d33d4aef5}
+Get the choice from end users. 
+
+Implemented in \hyperlink{class_menu_a2243881fe17494a0f6fc38a9211715d6}{Menu}.
+
+\hypertarget{class_displayer_1_1_displayer_class_a84478e90e6895f0061268c59d2040cc4}{\index{Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}!parse\+Choice@{parse\+Choice}}
+\index{parse\+Choice@{parse\+Choice}!Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}}
+\paragraph[{parse\+Choice}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Displayer\+::\+Displayer\+Class\+::parse\+Choice (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}}\label{class_displayer_1_1_displayer_class_a84478e90e6895f0061268c59d2040cc4}
+A method to parse the choice from user. Deciding which mehod to call upon each choice. 
+
+Implemented in \hyperlink{class_menu_aad01d0f840a8be08e301d24d17b00b96}{Menu}.
+
+\hypertarget{class_displayer_1_1_displayer_class_aa259ca88fafe20ad118cb8a492c88351}{\index{Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}!show\+Menu@{show\+Menu}}
+\index{show\+Menu@{show\+Menu}!Displayer\+::\+Displayer\+Class@{Displayer\+::\+Displayer\+Class}}
+\paragraph[{show\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Displayer\+::\+Displayer\+Class\+::show\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_displayer_1_1_displayer_class_aa259ca88fafe20ad118cb8a492c88351}
+Displaying the menu containing choices to end users. This method should be implemented differently according to different purposes. i.\+e G\+U\+I or Console. 
+
+Implemented in \hyperlink{class_menu_ab19f32f8deac0f6c6960f04be8612067}{Menu}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_displayer_8h}{Displayer.\+h}\end{DoxyCompactItemize}

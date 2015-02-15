@@ -1,0 +1,220 @@
+\hypertarget{class_file_coordinator}{\subsection{File\+Coordinator Class Reference}
+\label{class_file_coordinator}\index{File\+Coordinator@{File\+Coordinator}}
+}
+
+
+Abstract class for file manipulations.  
+
+
+
+
+{\ttfamily \#include $<$File\+Coordinator.\+h$>$}
+
+Inheritance diagram for File\+Coordinator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_file_coordinator}
+\end{center}
+\end{figure}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_file_coordinator_a87882b51519fff558b11f4862a021318}{file\+States} \{ \hyperlink{class_file_coordinator_a87882b51519fff558b11f4862a021318af1c825462619cd97356c2609113e828c}{R\+E\+A\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S}, 
+\hyperlink{class_file_coordinator_a87882b51519fff558b11f4862a021318adad0373980186384b160efe041ed22bd}{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+U\+R\+E}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the states of the file being processed. \end{DoxyCompactList}\item 
+enum \hyperlink{class_file_coordinator_a3675d464de774750ec143958d199891e}{save\+Types} \{ \hyperlink{class_file_coordinator_a3675d464de774750ec143958d199891ea0e8f89951a9591e7c4c9c98c79514b45}{M\+A\+T\+R\+I\+X}, 
+\hyperlink{class_file_coordinator_a3675d464de774750ec143958d199891eaf405bb89eede8cfbb12aefb8c0f230b4}{E\+N\+T\+R\+O\+P\+Y}, 
+\hyperlink{class_file_coordinator_a3675d464de774750ec143958d199891ea35b0a6cf33dc95857927320bfd6acce5}{W\+E\+I\+G\+H\+T\+S}, 
+\hyperlink{class_file_coordinator_a3675d464de774750ec143958d199891ea25e4073fbd44c81e075066787b33a5de}{I\+T\+E\+R\+A\+T\+I\+O\+N}
+ \}
+\begin{DoxyCompactList}\small\item\em Specifies the types of data to be saved. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{class_file_coordinator_a7d382bac08ac208a283c9c41e4be6117}{get\+Full\+Path} ()
+\item 
+string \hyperlink{class_file_coordinator_ab15e2283157ef9c18ebbb6e9e36f9744}{get\+File\+Name} ()
+\item 
+string \hyperlink{class_file_coordinator_af03a39aeaffebf1f90c25591700aa046}{get\+Failure\+Message} ()
+\item 
+virtual \hyperlink{class_file_coordinator_a87882b51519fff558b11f4862a021318}{file\+States} \hyperlink{class_file_coordinator_a135715b1b9b4eaab42e061ebf9fd2459}{read\+File} (string file\+Name, int num\+Of\+Genes)
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_file_coordinator_ab8313bec8a35d369ef65d59822dd6c68}{string \hyperlink{class_file_coordinator_ab8313bec8a35d369ef65d59822dd6c68}{F\+A\+I\+L\+U\+R\+E\+\_\+\+M\+E\+S\+S\+A\+G\+E}}\label{class_file_coordinator_ab8313bec8a35d369ef65d59822dd6c68}
+
+\begin{DoxyCompactList}\small\item\em Failure message expressing the cause of read file failure;. \end{DoxyCompactList}\item 
+\hypertarget{class_file_coordinator_aa78d3f7b41ca66e461b0ff4c8b488821}{string \hyperlink{class_file_coordinator_aa78d3f7b41ca66e461b0ff4c8b488821}{F\+O\+L\+D\+E\+R}}\label{class_file_coordinator_aa78d3f7b41ca66e461b0ff4c8b488821}
+
+\begin{DoxyCompactList}\small\item\em Folder of the file to process;. \end{DoxyCompactList}\item 
+\hypertarget{class_file_coordinator_a6d9ec231c41442f9d71ad62838bdb2fe}{string \hyperlink{class_file_coordinator_a6d9ec231c41442f9d71ad62838bdb2fe}{F\+I\+L\+E\+P\+R\+E\+F\+I\+X}}\label{class_file_coordinator_a6d9ec231c41442f9d71ad62838bdb2fe}
+
+\begin{DoxyCompactList}\small\item\em Prefix of the file. i.\+e \char`\"{}sparse\+Transition\+\_\+\char`\"{}. \end{DoxyCompactList}\item 
+\hypertarget{class_file_coordinator_ac92f75a0e19bff63fafc40217688f927}{string \hyperlink{class_file_coordinator_ac92f75a0e19bff63fafc40217688f927}{suffix}}\label{class_file_coordinator_ac92f75a0e19bff63fafc40217688f927}
+
+\begin{DoxyCompactList}\small\item\em Suffix of the file specified by user; i.\+e \char`\"{}new\+Test\char`\"{}. \end{DoxyCompactList}\item 
+\hypertarget{class_file_coordinator_a439cb1f8132fd37e04f92ac67f89c1df}{string \hyperlink{class_file_coordinator_a439cb1f8132fd37e04f92ac67f89c1df}{filename}}\label{class_file_coordinator_a439cb1f8132fd37e04f92ac67f89c1df}
+
+\begin{DoxyCompactList}\small\item\em Name of the file; i.\+e \char`\"{}\+C\+E\+M\char`\"{}, \char`\"{}overall\char`\"{}. \end{DoxyCompactList}\item 
+\hypertarget{class_file_coordinator_a73af7cec077de88eebd7a33fad13ef23}{\hyperlink{classt_matrix}{t\+Matrix} $\ast$ \hyperlink{class_file_coordinator_a73af7cec077de88eebd7a33fad13ef23}{transition}}\label{class_file_coordinator_a73af7cec077de88eebd7a33fad13ef23}
+
+\begin{DoxyCompactList}\small\item\em The transition matrix currently being processed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \hyperlink{class_file_coordinator_a913c584fd94fdcacd120bf6f52819aad}{save\+Matrix} ()
+\item 
+virtual void \hyperlink{class_file_coordinator_a2d9b661099244a87012a4f7de9d3a120}{save\+Vector} (vector$<$ double $>$ \&stats, \hyperlink{class_file_coordinator_a3675d464de774750ec143958d199891e}{save\+Types} type)
+\item 
+virtual void \hyperlink{class_file_coordinator_a53023597e8e80b9f6bb4f7edb16b098c}{save\+Iteration} ()
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Abstract class for file manipulations. 
+
+This is an abstract class that declared function prototypes used for file manipulations. Classes encapsulating algorithms should subclass from this class for file interaction and should implement the virtual methods as needed. 
+
+\subsubsection{Member Enumeration Documentation}
+\hypertarget{class_file_coordinator_a87882b51519fff558b11f4862a021318}{\index{File\+Coordinator@{File\+Coordinator}!file\+States@{file\+States}}
+\index{file\+States@{file\+States}!File\+Coordinator@{File\+Coordinator}}
+\paragraph[{file\+States}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf File\+Coordinator\+::file\+States}}}\label{class_file_coordinator_a87882b51519fff558b11f4862a021318}
+
+
+Specifies the states of the file being processed. 
+
+The file being read could be read successfully or there might be an exception. When the state is \char`\"{}\+R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+U\+R\+E\char`\"{}, a failure message will be generated for the user to correct. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{R\+E\+A\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S@{R\+E\+A\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S}!File\+Coordinator@{File\+Coordinator}}\index{File\+Coordinator@{File\+Coordinator}!R\+E\+A\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S@{R\+E\+A\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S}}\item[{\em 
+\hypertarget{class_file_coordinator_a87882b51519fff558b11f4862a021318af1c825462619cd97356c2609113e828c}{R\+E\+A\+D\+\_\+\+S\+U\+C\+C\+E\+S\+S}\label{class_file_coordinator_a87882b51519fff558b11f4862a021318af1c825462619cd97356c2609113e828c}
+}]File successfully read in. \index{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+U\+R\+E@{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+U\+R\+E}!File\+Coordinator@{File\+Coordinator}}\index{File\+Coordinator@{File\+Coordinator}!R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+U\+R\+E@{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+U\+R\+E}}\item[{\em 
+\hypertarget{class_file_coordinator_a87882b51519fff558b11f4862a021318adad0373980186384b160efe041ed22bd}{R\+E\+A\+D\+\_\+\+F\+A\+I\+L\+U\+R\+E}\label{class_file_coordinator_a87882b51519fff558b11f4862a021318adad0373980186384b160efe041ed22bd}
+}]Error occurred when reading file. \end{description}
+\end{Desc}
+\hypertarget{class_file_coordinator_a3675d464de774750ec143958d199891e}{\index{File\+Coordinator@{File\+Coordinator}!save\+Types@{save\+Types}}
+\index{save\+Types@{save\+Types}!File\+Coordinator@{File\+Coordinator}}
+\paragraph[{save\+Types}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf File\+Coordinator\+::save\+Types}}}\label{class_file_coordinator_a3675d464de774750ec143958d199891e}
+
+
+Specifies the types of data to be saved. 
+
+The types of data to be saved will be used to determine which method to be used for saving process. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+A\+T\+R\+I\+X@{M\+A\+T\+R\+I\+X}!File\+Coordinator@{File\+Coordinator}}\index{File\+Coordinator@{File\+Coordinator}!M\+A\+T\+R\+I\+X@{M\+A\+T\+R\+I\+X}}\item[{\em 
+\hypertarget{class_file_coordinator_a3675d464de774750ec143958d199891ea0e8f89951a9591e7c4c9c98c79514b45}{M\+A\+T\+R\+I\+X}\label{class_file_coordinator_a3675d464de774750ec143958d199891ea0e8f89951a9591e7c4c9c98c79514b45}
+}]Type M\+A\+T\+R\+I\+X is used when a transition matrix is saved;. \index{E\+N\+T\+R\+O\+P\+Y@{E\+N\+T\+R\+O\+P\+Y}!File\+Coordinator@{File\+Coordinator}}\index{File\+Coordinator@{File\+Coordinator}!E\+N\+T\+R\+O\+P\+Y@{E\+N\+T\+R\+O\+P\+Y}}\item[{\em 
+\hypertarget{class_file_coordinator_a3675d464de774750ec143958d199891eaf405bb89eede8cfbb12aefb8c0f230b4}{E\+N\+T\+R\+O\+P\+Y}\label{class_file_coordinator_a3675d464de774750ec143958d199891eaf405bb89eede8cfbb12aefb8c0f230b4}
+}]Type E\+N\+T\+R\+O\+P\+Y is used when saving entropies of decomposition;. \index{W\+E\+I\+G\+H\+T\+S@{W\+E\+I\+G\+H\+T\+S}!File\+Coordinator@{File\+Coordinator}}\index{File\+Coordinator@{File\+Coordinator}!W\+E\+I\+G\+H\+T\+S@{W\+E\+I\+G\+H\+T\+S}}\item[{\em 
+\hypertarget{class_file_coordinator_a3675d464de774750ec143958d199891ea35b0a6cf33dc95857927320bfd6acce5}{W\+E\+I\+G\+H\+T\+S}\label{class_file_coordinator_a3675d464de774750ec143958d199891ea35b0a6cf33dc95857927320bfd6acce5}
+}]Type W\+E\+I\+G\+H\+T\+S is used when saving wegits of decomposition;. \index{I\+T\+E\+R\+A\+T\+I\+O\+N@{I\+T\+E\+R\+A\+T\+I\+O\+N}!File\+Coordinator@{File\+Coordinator}}\index{File\+Coordinator@{File\+Coordinator}!I\+T\+E\+R\+A\+T\+I\+O\+N@{I\+T\+E\+R\+A\+T\+I\+O\+N}}\item[{\em 
+\hypertarget{class_file_coordinator_a3675d464de774750ec143958d199891ea25e4073fbd44c81e075066787b33a5de}{I\+T\+E\+R\+A\+T\+I\+O\+N}\label{class_file_coordinator_a3675d464de774750ec143958d199891ea25e4073fbd44c81e075066787b33a5de}
+}]Type I\+T\+E\+R\+A\+T\+I\+O\+N is used when saving the iteration information containing minimal entropy result. \end{description}
+\end{Desc}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_file_coordinator_af03a39aeaffebf1f90c25591700aa046}{\index{File\+Coordinator@{File\+Coordinator}!get\+Failure\+Message@{get\+Failure\+Message}}
+\index{get\+Failure\+Message@{get\+Failure\+Message}!File\+Coordinator@{File\+Coordinator}}
+\paragraph[{get\+Failure\+Message}]{\setlength{\rightskip}{0pt plus 5cm}string File\+Coordinator\+::get\+Failure\+Message (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_file_coordinator_af03a39aeaffebf1f90c25591700aa046}
+Get the failure message if exceptions happen during file manipulation process. \begin{DoxyReturn}{Returns}
+The failure message. 
+\end{DoxyReturn}
+\hypertarget{class_file_coordinator_ab15e2283157ef9c18ebbb6e9e36f9744}{\index{File\+Coordinator@{File\+Coordinator}!get\+File\+Name@{get\+File\+Name}}
+\index{get\+File\+Name@{get\+File\+Name}!File\+Coordinator@{File\+Coordinator}}
+\paragraph[{get\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}string File\+Coordinator\+::get\+File\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_file_coordinator_ab15e2283157ef9c18ebbb6e9e36f9744}
+Get the filename for the file that is currently being processed or created. i.\+e If full path is \char`\"{}\+Input/\+Provided/\+C\+E\+M.\+txt\char`\"{}, will return \char`\"{}\+C\+E\+M\char`\"{}. \begin{DoxyReturn}{Returns}
+The name of the file(without extension) being processed. 
+\end{DoxyReturn}
+\hypertarget{class_file_coordinator_a7d382bac08ac208a283c9c41e4be6117}{\index{File\+Coordinator@{File\+Coordinator}!get\+Full\+Path@{get\+Full\+Path}}
+\index{get\+Full\+Path@{get\+Full\+Path}!File\+Coordinator@{File\+Coordinator}}
+\paragraph[{get\+Full\+Path}]{\setlength{\rightskip}{0pt plus 5cm}string File\+Coordinator\+::get\+Full\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_file_coordinator_a7d382bac08ac208a283c9c41e4be6117}
+Get the full path of the file that is currently being processed or created. \begin{DoxyReturn}{Returns}
+The full path of the file. 
+\end{DoxyReturn}
+\hypertarget{class_file_coordinator_a135715b1b9b4eaab42e061ebf9fd2459}{\index{File\+Coordinator@{File\+Coordinator}!read\+File@{read\+File}}
+\index{read\+File@{read\+File}!File\+Coordinator@{File\+Coordinator}}
+\paragraph[{read\+File}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf file\+States} File\+Coordinator\+::read\+File (
+\begin{DoxyParamCaption}
+\item[{string}]{file\+Name, }
+\item[{int}]{num\+Of\+Genes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_file_coordinator_a135715b1b9b4eaab42e061ebf9fd2459}
+A function prototype declared for reading in a transition matrix from a certain file. Overriden by \char`\"{}\+Iterator\char`\"{} class. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file, without extension and path; \\
+\hline
+{\em num\+Of\+Genes} & The number of genes corresponding to the matrix in the file; \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A file\+States indicating whether the reading process is successful. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_iterator_a3da499aae907e1d3c1e98d41d986718b}{Iterator}.
+
+\hypertarget{class_file_coordinator_a53023597e8e80b9f6bb4f7edb16b098c}{\index{File\+Coordinator@{File\+Coordinator}!save\+Iteration@{save\+Iteration}}
+\index{save\+Iteration@{save\+Iteration}!File\+Coordinator@{File\+Coordinator}}
+\paragraph[{save\+Iteration}]{\setlength{\rightskip}{0pt plus 5cm}virtual void File\+Coordinator\+::save\+Iteration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_file_coordinator_a53023597e8e80b9f6bb4f7edb16b098c}
+Saves iteration information into current file. 
+
+Reimplemented in \hyperlink{class_iterator_a2bd1f005ae0c283af59e9b5698934d88}{Iterator}.
+
+\hypertarget{class_file_coordinator_a913c584fd94fdcacd120bf6f52819aad}{\index{File\+Coordinator@{File\+Coordinator}!save\+Matrix@{save\+Matrix}}
+\index{save\+Matrix@{save\+Matrix}!File\+Coordinator@{File\+Coordinator}}
+\paragraph[{save\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}virtual string File\+Coordinator\+::save\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_file_coordinator_a913c584fd94fdcacd120bf6f52819aad}
+Saves the transition matrix to current file. \begin{DoxyReturn}{Returns}
+Returns the full path of the file. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_simulator_a1270d2e2eeaa4aa3284e2d74a8644bc3}{Simulator}.
+
+\hypertarget{class_file_coordinator_a2d9b661099244a87012a4f7de9d3a120}{\index{File\+Coordinator@{File\+Coordinator}!save\+Vector@{save\+Vector}}
+\index{save\+Vector@{save\+Vector}!File\+Coordinator@{File\+Coordinator}}
+\paragraph[{save\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}virtual void File\+Coordinator\+::save\+Vector (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$ \&}]{stats, }
+\item[{{\bf save\+Types}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}}\label{class_file_coordinator_a2d9b661099244a87012a4f7de9d3a120}
+Saves a vector into the current file, depending on the parameters. 
+\begin{DoxyParams}{Parameters}
+{\em stats} & The vector data to save. \\
+\hline
+{\em type} & The save\+Type specifying the type of data. i.\+e E\+N\+T\+R\+O\+P\+Y, W\+E\+I\+G\+H\+T\+S \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_iterator_a17d24545df8bc3245ef4d31928a85186}{Iterator}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_file_coordinator_8h}{File\+Coordinator.\+h}\end{DoxyCompactItemize}

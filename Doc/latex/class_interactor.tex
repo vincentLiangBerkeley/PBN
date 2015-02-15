@@ -1,0 +1,240 @@
+\hypertarget{class_interactor}{\subsection{Interactor Class Reference}
+\label{class_interactor}\index{Interactor@{Interactor}}
+}
+
+
+An abstract controller class that contains method prototypes or basic implementations of methods for further overriding.  
+
+
+
+
+{\ttfamily \#include $<$Interactor.\+h$>$}
+
+Inheritance diagram for Interactor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_interactor}
+\end{center}
+\end{figure}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_interactor_ab67e4ff9ff5d44ee2001e7700dfeb164}{initialize\+Iterator} ()
+\item 
+void \hyperlink{class_interactor_a8416bb98d11e11b841db245e93c98853}{initialize\+Simulator} ()
+\item 
+void \hyperlink{class_interactor_aeb10be4d589b66a8624d7221f7600f87}{initialize\+Iterator} (string suffix, string file\+Name, int num\+Of\+Genes)
+\item 
+void \hyperlink{class_interactor_a1a9260b3dbc1c1f87933f98fadedb979}{initialize\+Simulator} (int num\+Of\+Genes, int simulate\+Type, string suffix)
+\item 
+string \hyperlink{class_interactor_a20edc6190516131bec1f697b81410550}{start\+Iterator} ()
+\item 
+string \hyperlink{class_interactor_a60a3be74e1e954f23182fab7b638164e}{start\+Simulator} ()
+\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_interactor_a63d581b5afbf258b25915b318c1216c7}{get\+Simulator\+Params} (int \&num\+Of\+Genes, int \&simulate\+Type, string \&suffix)=0
+\item 
+virtual bool \hyperlink{class_interactor_a6e98daf626d09b585375eec2d5311f25}{get\+Iterator\+Params} (\hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679c}{Iterator\+::\+Iterator\+Status} \&status, \hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430}{Iterator\+::\+Random\+Types} \&type, string \&file\+Name, string \&suffix, int \&num\+Of\+Genes)=0
+\item 
+virtual string \hyperlink{class_interactor_af3d8accfc60634bf82be9c438c0b9400}{get\+Suffix} ()=0
+\item 
+virtual void \hyperlink{class_interactor_ac2282b0725d5bd6216edb0f2ea4dd421}{test\+All\+On\+Simulator} ()=0
+\item 
+virtual void \hyperlink{class_interactor_aeeec69df23673e87530a1b1db98998ee}{test\+All\+On\+Iterator} (\hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679c}{Iterator\+::\+Iterator\+Status} status)=0
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+An abstract controller class that contains method prototypes or basic implementations of methods for further overriding. 
+
+\subsubsection{Member Function Documentation}
+\hypertarget{class_interactor_a6e98daf626d09b585375eec2d5311f25}{\index{Interactor@{Interactor}!get\+Iterator\+Params@{get\+Iterator\+Params}}
+\index{get\+Iterator\+Params@{get\+Iterator\+Params}!Interactor@{Interactor}}
+\paragraph[{get\+Iterator\+Params}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Interactor\+::get\+Iterator\+Params (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator\+::\+Iterator\+Status} \&}]{status, }
+\item[{{\bf Iterator\+::\+Random\+Types} \&}]{type, }
+\item[{string \&}]{file\+Name, }
+\item[{string \&}]{suffix, }
+\item[{int \&}]{num\+Of\+Genes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}}\label{class_interactor_a6e98daf626d09b585375eec2d5311f25}
+Function prototype for getting \hyperlink{class_iterator}{Iterator} parameters. 
+\begin{DoxyParams}{Parameters}
+{\em status} & \hyperlink{class_iterator}{Iterator} status, S\+I\+M\+U\+L\+A\+T\+E\+D or P\+R\+O\+V\+I\+D\+E\+D. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_iterator_a1eb24c519953c2a333ea4a345b0c679c}{Iterator\+::\+Iterator\+Status} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Iteration type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{class_iterator_a68bc1c5e7ad39ed78690beaa8a607430}{Iterator\+::\+Random\+Types} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The input filename. i.\+e \char`\"{}overall\char`\"{} for \char`\"{}overall.\+txt\char`\"{} \\
+\hline
+{\em suffix} & File suffix added to output file \\
+\hline
+{\em num\+Of\+Genes} & Number of genes corresponding to the input file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the \hyperlink{class_iterator}{Iterator} parameters are default values 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_menu_ac759d0525a0736f421e8dfd443b1177c}{Menu}.
+
+\hypertarget{class_interactor_a63d581b5afbf258b25915b318c1216c7}{\index{Interactor@{Interactor}!get\+Simulator\+Params@{get\+Simulator\+Params}}
+\index{get\+Simulator\+Params@{get\+Simulator\+Params}!Interactor@{Interactor}}
+\paragraph[{get\+Simulator\+Params}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Interactor\+::get\+Simulator\+Params (
+\begin{DoxyParamCaption}
+\item[{int \&}]{num\+Of\+Genes, }
+\item[{int \&}]{simulate\+Type, }
+\item[{string \&}]{suffix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}}\label{class_interactor_a63d581b5afbf258b25915b318c1216c7}
+Function prototype for getting \hyperlink{class_simulator}{Simulator} parameters. 
+\begin{DoxyParams}{Parameters}
+{\em num\+Of\+Genes} & Number of genes to simulate \\
+\hline
+{\em simulate\+Type} & Type of simulation, default is S\+P\+A\+R\+S\+E \\
+\hline
+{\em suffix} & Suffix added to the end of output file \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_menu_a893fd3c7d9e4bc5e32d4e2e20d8da804}{Menu}.
+
+\hypertarget{class_interactor_af3d8accfc60634bf82be9c438c0b9400}{\index{Interactor@{Interactor}!get\+Suffix@{get\+Suffix}}
+\index{get\+Suffix@{get\+Suffix}!Interactor@{Interactor}}
+\paragraph[{get\+Suffix}]{\setlength{\rightskip}{0pt plus 5cm}virtual string Interactor\+::get\+Suffix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}}\label{class_interactor_af3d8accfc60634bf82be9c438c0b9400}
+Prototype for the method used to get file suffix from user \begin{DoxyReturn}{Returns}
+The file suffix provided by the user 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{class_menu_ab5b08e13a2db9ae41ac9e9696473a143}{Menu}.
+
+\hypertarget{class_interactor_ab67e4ff9ff5d44ee2001e7700dfeb164}{\index{Interactor@{Interactor}!initialize\+Iterator@{initialize\+Iterator}}
+\index{initialize\+Iterator@{initialize\+Iterator}!Interactor@{Interactor}}
+\paragraph[{initialize\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}void Interactor\+::initialize\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_interactor_ab67e4ff9ff5d44ee2001e7700dfeb164}
+Initialize the owned \hyperlink{class_iterator}{Iterator} object. \hypertarget{class_interactor_aeb10be4d589b66a8624d7221f7600f87}{\index{Interactor@{Interactor}!initialize\+Iterator@{initialize\+Iterator}}
+\index{initialize\+Iterator@{initialize\+Iterator}!Interactor@{Interactor}}
+\paragraph[{initialize\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}void Interactor\+::initialize\+Iterator (
+\begin{DoxyParamCaption}
+\item[{string}]{suffix, }
+\item[{string}]{file\+Name, }
+\item[{int}]{num\+Of\+Genes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_interactor_aeb10be4d589b66a8624d7221f7600f87}
+Overloaded version, initialize the \hyperlink{class_iterator}{Iterator} with specified params. 
+\begin{DoxyParams}{Parameters}
+{\em suffix} & File suffix added to the end of the file \\
+\hline
+{\em file\+Name} & The file name of input \\
+\hline
+{\em num\+Of\+Genes} & Number of genes corresponding to the input file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method is called by the \hyperlink{class_interactor_ab67e4ff9ff5d44ee2001e7700dfeb164}{Interactor\+::initialize\+Iterator()} method internally. 
+\end{DoxyNote}
+\hypertarget{class_interactor_a8416bb98d11e11b841db245e93c98853}{\index{Interactor@{Interactor}!initialize\+Simulator@{initialize\+Simulator}}
+\index{initialize\+Simulator@{initialize\+Simulator}!Interactor@{Interactor}}
+\paragraph[{initialize\+Simulator}]{\setlength{\rightskip}{0pt plus 5cm}void Interactor\+::initialize\+Simulator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_interactor_a8416bb98d11e11b841db245e93c98853}
+Initialize the owned \hyperlink{class_simulator}{Simulator} object. \hypertarget{class_interactor_a1a9260b3dbc1c1f87933f98fadedb979}{\index{Interactor@{Interactor}!initialize\+Simulator@{initialize\+Simulator}}
+\index{initialize\+Simulator@{initialize\+Simulator}!Interactor@{Interactor}}
+\paragraph[{initialize\+Simulator}]{\setlength{\rightskip}{0pt plus 5cm}void Interactor\+::initialize\+Simulator (
+\begin{DoxyParamCaption}
+\item[{int}]{num\+Of\+Genes, }
+\item[{int}]{simulate\+Type, }
+\item[{string}]{suffix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_interactor_a1a9260b3dbc1c1f87933f98fadedb979}
+Overloaded version, initialize the \hyperlink{class_simulator}{Simulator} with specified params. 
+\begin{DoxyParams}{Parameters}
+{\em num\+Of\+Genes} & Number of genes the user wants to simulate \\
+\hline
+{\em simulate\+Type} & The type of simulation, the default is S\+P\+A\+R\+S\+E \\
+\hline
+{\em suffix} & The file suffix of the output file\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This method is called by the \hyperlink{class_interactor_a8416bb98d11e11b841db245e93c98853}{Interactor\+::initialize\+Simulator()} method internally. 
+\end{DoxyNote}
+\hypertarget{class_interactor_a20edc6190516131bec1f697b81410550}{\index{Interactor@{Interactor}!start\+Iterator@{start\+Iterator}}
+\index{start\+Iterator@{start\+Iterator}!Interactor@{Interactor}}
+\paragraph[{start\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}string Interactor\+::start\+Iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_interactor_a20edc6190516131bec1f697b81410550}
+Starts the \hyperlink{class_iterator}{Iterator} object, will be overridden in concrete implementation. \begin{DoxyReturn}{Returns}
+A message indicating the status of the \hyperlink{class_iterator}{Iterator} 
+\end{DoxyReturn}
+\hypertarget{class_interactor_a60a3be74e1e954f23182fab7b638164e}{\index{Interactor@{Interactor}!start\+Simulator@{start\+Simulator}}
+\index{start\+Simulator@{start\+Simulator}!Interactor@{Interactor}}
+\paragraph[{start\+Simulator}]{\setlength{\rightskip}{0pt plus 5cm}string Interactor\+::start\+Simulator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_interactor_a60a3be74e1e954f23182fab7b638164e}
+Starts the \hyperlink{class_simulator}{Simulator} object, will be overridden in concrete implementation. \begin{DoxyReturn}{Returns}
+A message indicating the status of the \hyperlink{class_simulator}{Simulator} 
+\end{DoxyReturn}
+\hypertarget{class_interactor_aeeec69df23673e87530a1b1db98998ee}{\index{Interactor@{Interactor}!test\+All\+On\+Iterator@{test\+All\+On\+Iterator}}
+\index{test\+All\+On\+Iterator@{test\+All\+On\+Iterator}!Interactor@{Interactor}}
+\paragraph[{test\+All\+On\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Interactor\+::test\+All\+On\+Iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf Iterator\+::\+Iterator\+Status}}]{status}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}}\label{class_interactor_aeeec69df23673e87530a1b1db98998ee}
+Test all prepared iteration cases, either P\+R\+O\+V\+I\+D\+E\+D or S\+I\+M\+U\+L\+A\+T\+E\+D 
+\begin{DoxyParams}{Parameters}
+{\em status} & Input file type. P\+R\+O\+V\+I\+D\+E\+D or S\+I\+M\+U\+L\+A\+T\+E\+D. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_menu_a4ff4dfbd63a558ed2a6aa79fbde05eba}{Menu}.
+
+\hypertarget{class_interactor_ac2282b0725d5bd6216edb0f2ea4dd421}{\index{Interactor@{Interactor}!test\+All\+On\+Simulator@{test\+All\+On\+Simulator}}
+\index{test\+All\+On\+Simulator@{test\+All\+On\+Simulator}!Interactor@{Interactor}}
+\paragraph[{test\+All\+On\+Simulator}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Interactor\+::test\+All\+On\+Simulator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [pure virtual]}}}\label{class_interactor_ac2282b0725d5bd6216edb0f2ea4dd421}
+Test all prepared simulation cases. 
+
+Implemented in \hyperlink{class_menu_a27538c5e2650251e98ed91257b0a2ba8}{Menu}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_interactor_8h}{Interactor.\+h}\item 
+Interactor.\+cpp\end{DoxyCompactItemize}
